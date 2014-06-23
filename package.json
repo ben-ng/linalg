@@ -1,7 +1,7 @@
 {
   "name": "linalg",
   "version": "0.2.4",
-  "description": "Linear algebra library in pure javascript",
+  "description": "A performance-oriented, fully tested Linear Algebra library",
   "main": "index.js",
   "scripts": {
     "test": "node test"
@@ -20,7 +20,11 @@
     "singular",
     "value",
     "decomposition",
-    "transpose"
+    "transpose",
+    "transform",
+    "gaussian",
+    "elimination",
+    "dimension"
   ],
   "author": "Ben Ng <me@benng.me>",
   "license": "MIT",

@@ -1,6 +1,18 @@
 var matrix = require('../lib/matrix')
   , assert = require('assert')
 
+assert.throws(function () {
+  matrix.dot([[1]], [1, 2])
+}, /Dot product requires matrix.columns = vector\.dimensions/)
+
+assert.throws(function () {
+  matrix.dot([1, 2], [[1]])
+}, /Dot products of the form \(vector \. matrix\) are not possible/)
+
+assert.throws(function () {
+  matrix.dot([[1], [3], [5]], [[1, 2], [4, 5]])
+}, /Dot product requires two matrices a, b where a\.columns = b\.rows/)
+
 assert.deepEqual(matrix.dot(
   [
     [1, 2, 3]

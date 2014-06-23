@@ -27,8 +27,5 @@
   "bugs": {
     "url": "https://github.com/ben-ng/linalg/issues"
   },
-  "homepage": "https://github.com/ben-ng/linalg",
-  "devDependencies": {
-    "benchmark": "1.0.x"
-  }
+  "homepage": "https://github.com/ben-ng/linalg"
 }

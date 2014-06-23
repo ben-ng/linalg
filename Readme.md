@@ -2,9 +2,13 @@
 
 [![Build Status](https://travis-ci.org/ben-ng/linalg.svg?branch=master)](https://travis-ci.org/ben-ng/linalg)
 
-A performance-focused linear algebra module for working in an arbitrary number of dimensions.
+A performance-focused linear algebra module.
 
-Sticks to the Mathematica API whenever possible.
+## At A Glance
+
+ * 100% statement and branch coverage
+ * Work in any number of dimensions
+ * Sticks to the Mathematica API whenever possible
 
 ## Usage
 

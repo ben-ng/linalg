@@ -1,0 +1,31 @@
+{
+  "name": "linalg",
+  "version": "0.0.0",
+  "description": "Linear algebra library in pure javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ben-ng/linalg.git"
+  },
+  "keywords": [
+    "linear",
+    "algebra",
+    "matrix",
+    "vector",
+    "point",
+    "svd",
+    "singular",
+    "value",
+    "decomposition",
+    "transpose"
+  ],
+  "author": "Ben Ng <me@benng.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ben-ng/linalg/issues"
+  },
+  "homepage": "https://github.com/ben-ng/linalg"
+}

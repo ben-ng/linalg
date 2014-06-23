@@ -10,6 +10,12 @@ A performance-focused linear algebra module.
  * Work in any number of dimensions
  * Sticks to the Mathematica API whenever possible
 
+## Warning!
+
+Please use a mature library when doing mission-critical work. [There are accuracy problems with naive solutions to linear algebra problems](http://gauss.uc3m.es/web/personal_web/fdopico/talks/2013-cedya.pdf).
+
+I may not be an expert in numerical analysis, but I know enough to warn you about the dangers of running Javascript on the International Space Station.
+
 ## Usage
 
 `linalg` uses native arrays because of their raw speed.
@@ -32,7 +38,7 @@ hang = l.transpose(identity)
 stretch = identity
 align = identity
 
-// the associative property rocks
+// feel free to string these along
 A = l.dot(hang, stretch, align)
 
 // this (matrix . vector) operation should do nothing
@@ -45,4 +51,4 @@ I needed a performance focused linear algebra module for visualizing data in 10+
 
 I started out with a chainable, [vektor](https://www.npmjs.org/package/vektor)-like API, but found that no matter how hard I tried, using anything other than native `Array` resulted in a 20-500x slowdown depending on the operation.
 
-I might add a more sugary API on top later.
+With that in mind, I'd like this module to be a low-level framework for others to build upon.

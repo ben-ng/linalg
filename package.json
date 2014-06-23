@@ -1,6 +1,6 @@
 {
   "name": "linalg",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Linear algebra library in pure javascript",
   "main": "index.js",
   "scripts": {

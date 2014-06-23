@@ -5,6 +5,7 @@
 ```javascript
 var l = require('linalg')
   , assert = require('assert')
+  , identity
   , frame
   , hang
   , stretch
@@ -12,15 +13,16 @@ var l = require('linalg')
   , A
   , point
 
-frame = l.matrix(la.vector(1, 0, 0), la.vector(0, 1, 0), la.vector(0, 0, 1))
+identity = l.diagonalMatrix(1, 1, 1)
 
-point = l.point(2, 4, 6)
 
-hang = frame.copy().transpose()
-stretch = l.diagonalMatrix(1, 1, 1)
-align = frame.copy()
+point = [2, 4, 6]
+frame = identity
+hang = l.transpose(identity)
+stretch = identity
+align = identity
 
-A = hang.dot(stretch).dot(align)
+A = l.dot(hang, stretch, align)
 
-assert.ok(A.dot(point).equals(point))
+assert.deepEqual(point, l.dot(A, point))
 ```

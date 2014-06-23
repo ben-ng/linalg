@@ -4,7 +4,7 @@
   "description": "Linear algebra library in pure javascript",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/ben-ng/linalg/issues"
   },
-  "homepage": "https://github.com/ben-ng/linalg"
+  "homepage": "https://github.com/ben-ng/linalg",
+  "devDependencies": {
+    "benchmark": "^1.0.0"
+  }
 }

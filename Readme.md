@@ -1,5 +1,7 @@
 # LinAlg
 
+[![Build Status](https://travis-ci.org/ben-ng/linalg.svg?branch=master)](https://travis-ci.org/ben-ng/linalg)
+
 A performance-focused linear algebra module for working in an arbitrary number of dimensions.
 
 Sticks to the Mathematica API whenever possible.

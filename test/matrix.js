@@ -35,3 +35,11 @@ assert.deepEqual(matrix.dot(
     [58 * 2 + 64 * 6, 58 * 4 + 64 * 8]
   , [139 * 2 + 154 * 6, 139 * 4 + 154 * 8]
   ], 'chaining matrix multiplication should work')
+
+assert.deepEqual(matrix.transpose([[2, 3], [4, 5]])
+  , [[2, 4], [3, 5]]
+  , 'in-place transpose should work')
+
+assert.deepEqual(matrix.transpose([[2, 3, 4], [4, 5, 6]])
+  , [[2, 4], [3, 5], [4, 6]]
+  , 'rectangular matrix transpose should work')

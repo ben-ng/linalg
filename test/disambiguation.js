@@ -3,17 +3,17 @@ var lib = require('../index')
 
 assert.deepEqual(lib.dot(
   [
-    [1, 2, 3]
-  , [4, 5, 6]
+    [1, 2]
+  , [2, 1]
   ]
-, [
-    [7, 8]
-  , [9, 10]
-  , [11, 12]
-  ])
-, [
-    [58, 64]
-  , [139, 154]
-  ], 'should use matrix multiplication')
+, [2, 2]
+, [3, 4])
+, 42, 'should use (matrix . vector) = vector, then (vector . vector) = scalar')
 
 assert.equal(lib.dot([1, 2, 3], [2, 3, 4]), 1*2 + 2*3 + 3*4, 'should use vector dot product')
+
+assert.equal(lib.dot([1, 2, 3], [2, 3, 4]), 1*2 + 2*3 + 3*4, 'should use vector dot product')
+
+assert.equal(lib.dimensions([1, 2, 3]), 3, 'should use vector dimensions')
+
+assert.deepEqual(lib.dimensions([[1, 0], [0, 1]]), [2, 2], 'should use matrix dimensions')

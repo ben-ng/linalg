@@ -5,15 +5,21 @@ var k
 
 // Applies the Right Thing depending on what the arguments are
 function disambiguate(vectorFunc, matrixFunc) {
-  return function disambiguated () {
-    // If any argument is a matrix, use the matrix version
-    for(var i=0, ii=arguments.length; i<ii; ++i) {
-      if(matrix.isMatrix(arguments[i])) {
-        return matrixFunc.apply(this, arguments)
-      }
+  function _disambiguated (a, b) {
+    if(matrix.isMatrix(a) || matrix.isMatrix(b)) {
+      return matrixFunc(a, b)
     }
 
-    return vectorFunc.apply(this, arguments)
+    return vectorFunc(a, b)
+  }
+
+  return function disambiguated (arg) {
+    if(arguments.length >= 2) {
+      return Array.prototype.slice.call(arguments).reduce(_disambiguated)
+    }
+    else {
+      return _disambiguated(arg, null)
+    }
   }
 }
 

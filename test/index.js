@@ -5,6 +5,8 @@ require('./matrix')
 
 require('./disambiguation')
 
+require('./numeric')
+
 require('./readme')
 
 console.log('All tests successfully passed')

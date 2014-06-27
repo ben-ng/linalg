@@ -2,19 +2,18 @@
 
 [![Build Status](https://travis-ci.org/ben-ng/linalg.svg?branch=master)](https://travis-ci.org/ben-ng/linalg)
 
-A performance-focused linear algebra module.
+A linear algebra module with an emphasis on correctness and performance (in that order).
 
 ## At A Glance
 
  * 100% statement and branch coverage
+ * Emphasis on numerical accuracy
  * Work in any number of dimensions
  * Sticks to the Mathematica API whenever possible
 
 ## Warning!
 
-Please use a mature library when doing mission-critical work. [There are accuracy problems with naive solutions to linear algebra problems](http://gauss.uc3m.es/web/personal_web/fdopico/talks/2013-cedya.pdf).
-
-I may not be an expert in numerical analysis, but I know enough to warn you about the dangers of running Javascript on the International Space Station.
+Please use a mature library when doing mission-critical work. I am no expert in numerical analysis. (If you are, let me know so I can add you as a contributor!)
 
 ## Usage
 
@@ -47,8 +46,8 @@ assert.deepEqual(l.dot(A, point), point)
 
 ## Motivation
 
-I needed a performance focused linear algebra module for visualizing data in 10+ dimensions, and implementing machine learning algorithms.
+I needed a performance focused linear algebra module for visualizing data in 10+ dimensions, and implementing machine learning algorithms. I quickly learned that naive solutions to linear algebra operations can produce numerical errors so significant they are utterly useless for anything other than casual playtime. After that, I prioritized correctness over performance.
 
 I started out with a chainable, [vektor](https://www.npmjs.org/package/vektor)-like API, but found that no matter how hard I tried, using anything other than native `Array` resulted in a 20-500x slowdown depending on the operation.
 
-With that in mind, I'd like this module to be a low-level framework for others to build upon.
+I'd like this module to be a low-level framework for others to build upon. It should just be a library of the best known linear algebra algorithms, with minimal sugar added.

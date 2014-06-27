@@ -31,5 +31,8 @@
   "bugs": {
     "url": "https://github.com/ben-ng/linalg/issues"
   },
-  "homepage": "https://github.com/ben-ng/linalg"
+  "homepage": "https://github.com/ben-ng/linalg",
+  "dependencies": {
+    "add": "2.x.x"
+  }
 }
